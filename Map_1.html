@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script>L_PREFER_CANVAS=false; L_NO_TOUCH=false; L_DISABLE_3D=false;</script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.3.4/dist/leaflet.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.3.4/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+    <meta name="viewport" content="width=device-width,
+        initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <style>#map_422ca30e2f1040739f7c113b866c75f4 {
+        position: relative;
+        width: 100.0%;
+        height: 100.0%;
+        left: 0.0%;
+        top: 0.0%;
+        }
+    </style>
+</head>
+<body>    
+    
+    <div class="folium-map" id="map_422ca30e2f1040739f7c113b866c75f4" ></div>
+</body>
+<script>    
+    
+    
+        var bounds = null;
+    
+
+    var map_422ca30e2f1040739f7c113b866c75f4 = L.map(
+        'map_422ca30e2f1040739f7c113b866c75f4', {
+        center: [0, 0],
+        zoom: 1,
+        maxBounds: bounds,
+        layers: [],
+        worldCopyJump: false,
+        crs: L.CRS.EPSG3857,
+        zoomControl: true,
+        });
+
+    
+    
+    var tile_layer_5045eae3b3634846ada6c0773f284f68 = L.tileLayer(
+        'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+        {
+        "attribution": null,
+        "detectRetina": false,
+        "maxNativeZoom": 18,
+        "maxZoom": 18,
+        "minZoom": 0,
+        "noWrap": false,
+        "opacity": 1,
+        "subdomains": "abc",
+        "tms": false
+}).addTo(map_422ca30e2f1040739f7c113b866c75f4);
+    
+        var marker_2e2c275b7a344c789d97f867621eeea7 = L.marker(
+            [52.598876953125, -1.46688103675842],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_422ca30e2f1040739f7c113b866c75f4);
+        
+    
+
+                var icon_f349b1edda39465b868b54f4d80338fc = L.AwesomeMarkers.icon({
+                    icon: 'cloud',
+                    iconColor: 'blue',
+                    markerColor: 'black',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_2e2c275b7a344c789d97f867621eeea7.setIcon(icon_f349b1edda39465b868b54f4d80338fc);
+            
+    
+            var popup_44aac464a8d446519083de0b2c79b07c = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_db8bde58d43c415dae93efc148ab618c = $(`<div id="html_db8bde58d43c415dae93efc148ab618c" style="width: 100.0%; height: 100.0%;">1890:  London's Trafalgar Square || </div>`)[0];
+                popup_44aac464a8d446519083de0b2c79b07c.setContent(html_db8bde58d43c415dae93efc148ab618c);
+            
+
+            marker_2e2c275b7a344c789d97f867621eeea7.bindPopup(popup_44aac464a8d446519083de0b2c79b07c)
+            ;
+
+            
+        
+    
+        var marker_6931a4cbcfb54626b218d903c769f278 = L.marker(
+            [40.1387786865234, -74.6769104003906],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_422ca30e2f1040739f7c113b866c75f4);
+        
+    
+
+                var icon_81339ec21235451aa7aac064e89167a0 = L.AwesomeMarkers.icon({
+                    icon: 'cloud',
+                    iconColor: 'blue',
+                    markerColor: 'black',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_6931a4cbcfb54626b218d903c769f278.setIcon(icon_81339ec21235451aa7aac064e89167a0);
+            
+    
+            var popup_7e15c50df2774f9ab1f2922178fac02b = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_170f3591b30e470b801f9190540ddb03 = $(`<div id="html_170f3591b30e470b801f9190540ddb03" style="width: 100.0%; height: 100.0%;">1890:  Monkeyshines, No. 1 || Monkeyshines, No. 2 || </div>`)[0];
+                popup_7e15c50df2774f9ab1f2922178fac02b.setContent(html_170f3591b30e470b801f9190540ddb03);
+            
+
+            marker_6931a4cbcfb54626b218d903c769f278.bindPopup(popup_7e15c50df2774f9ab1f2922178fac02b)
+            ;
+
+            
+        
+    
+        var marker_239605f8f09e4f6fb447dd876e0f2e54 = L.marker(
+            [40.1387786865234, -74.6769104003906],
+            {
+                icon: new L.Icon.Default()
+                }
+            ).addTo(map_422ca30e2f1040739f7c113b866c75f4);
+        
+    
+
+                var icon_6757fecea67948e2b7051657f0e128ac = L.AwesomeMarkers.icon({
+                    icon: 'cloud',
+                    iconColor: 'blue',
+                    markerColor: 'black',
+                    prefix: 'glyphicon',
+                    extraClasses: 'fa-rotate-0'
+                    });
+                marker_239605f8f09e4f6fb447dd876e0f2e54.setIcon(icon_6757fecea67948e2b7051657f0e128ac);
+            
+    
+            var popup_4a287a0db35b4cd59cc96e2ea6f13f20 = L.popup({maxWidth: '300'
+            
+            });
+
+            
+                var html_427cd4dcdc2b4a208563cfcee0fdd361 = $(`<div id="html_427cd4dcdc2b4a208563cfcee0fdd361" style="width: 100.0%; height: 100.0%;">1890:  Monkeyshines, No. 3 || </div>`)[0];
+                popup_4a287a0db35b4cd59cc96e2ea6f13f20.setContent(html_427cd4dcdc2b4a208563cfcee0fdd361);
+            
+
+            marker_239605f8f09e4f6fb447dd876e0f2e54.bindPopup(popup_4a287a0db35b4cd59cc96e2ea6f13f20)
+            ;
+
+            
+        
+</script>
