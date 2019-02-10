@@ -24,8 +24,10 @@ def main(year):
             a = films[i][1].split(")")
             try:
                 b = int(a[0])
+                
             except ValueError as error:
                 b = 0
+                
             films[i][1] = b
             if len(films[i][-1].split(",")) > 2:
                 a = films[i][-1].split(",")[-2::]
@@ -35,18 +37,23 @@ def main(year):
                 r += a[-1]
                 r = r.strip(" ")
                 films[i][-1] = r
+                
             m = films[i][-1]
             films[i] = films[i][:2:]
             films[i].append(m)
             films1.append(films[i])
+            
     places = {}
+    
     for i in films1:
         if not i[2] in places:
             places[i[2]] = str(i[0]) + " || "
+            
         elif not i[0] in places[i[2]]:
             a = places[i[2]]
             a += str(i[0]) + " || "
             places[i[2]] = a
+            
     return places
 
 def add_film(filminf):
@@ -84,6 +91,7 @@ def add_population():
             human = human.split("\t")
             for info in range(len(human)):
                 human[info] = human[info].strip(" ")
+                
             human[0] = human[1] + ", " + human[2]
             location = geolocator.geocode(human[0])
             map.add_child(folium.CircleMarker(location=[location.latitude - 0.5, location.longitude - 0.5],
@@ -93,13 +101,11 @@ def add_population():
                                               fill_opacity = 0.3,
                                               radius=20,
                                               fill_color = "red"))
+            
     except GeocoderTimedOut as error:
         pass
     except GeocoderServiceError as error:
         pass
-
-
-
 
 
 if __name__ == "__main__":
@@ -115,20 +121,17 @@ if __name__ == "__main__":
 
     b = str(input("Do you want to see the most inhabited regions(write Yes or No)? - "))
 
-
     miss = 0
     places = main(year)
     for place in places:
-        add_film([place, places[place], year, 0, "blue", "black"])
+        add_film([place, places[place], year, miss, "blue", "black"])
+        
     if a == "Yes":
         places = main(year1)
         miss += 0.2
         for place in places:
             add_film([place, places[place], year1, miss, "yellow", "green"])
-
-
-
-
+            
     if b == "Yes":
         add_population()
     map.save('Map_1.html')
